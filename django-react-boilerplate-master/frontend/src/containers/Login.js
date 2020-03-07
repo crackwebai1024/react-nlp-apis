@@ -35,12 +35,13 @@ class LoginForm extends React.Component {
     }
     return (
       <Grid
+        className="wrapper"
         textAlign="center"
-        style={{ height: "100vh" }}
+        style={{ height: "90vh" }}
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="teal" textAlign="center">
+          <Header as="h2" className="user_color_green" textAlign="center">
             Log-in to your account
           </Header>
           {error && <p>{this.props.error.message}</p>}
@@ -55,6 +56,7 @@ class LoginForm extends React.Component {
                   fluid
                   icon="user"
                   iconPosition="right"
+                  iconColor="#2CFFFF"
                   placeholder="Username"
                 />
                 <Form.Input
@@ -69,7 +71,7 @@ class LoginForm extends React.Component {
                 />
 
                 <Button
-                  color="teal"
+                  className="user_background_blue"
                   fluid
                   size="large"
                   loading={loading}
